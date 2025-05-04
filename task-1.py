@@ -14,11 +14,11 @@ tally={'Days Gone': 0,
   'Apex Legends': 0,
   'Death Stranding': 0
 }
-choice=""
 games=['Days Gone', 'Resident Evil 2','Fortnite','Apex Legends','Death Stranding']
 while True: 
+  choice=""
   print('\n [Type "quit" to quit. Type "menu" to view the menu] \nPlease enter your choice: \t')
-  ch=input("")
+  ch=input("").lower()
   if ch=='quit':
     break
   elif ch=='menu':
@@ -44,7 +44,8 @@ What shall I stream next?
   elif ch=='f':
     choice=random.choice(games)
     print(f"Surprise! You got {choice}")
-  
+  else:
+    print("Invalid choice. Please enter a choice from menu.")
 
   tally[choice]+=1
   print(f"You have chosen {choice}. I appreciate your time and hope to see you in the next one!")
